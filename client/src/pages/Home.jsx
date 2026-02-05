@@ -1,13 +1,31 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import About from "./About";
+import Services from "./Services"
+import Technologies from "./Technologies";
+import Careers from "./Careers";
+import Contact from "./Contact";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <>
+      {/* Navbar */}
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 min-h-screen flex items-center justify-center bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 text-white px-6">
+      <section
+        className="pt-32 min-h-screen flex items-center justify-center 
+      bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 text-white px-6"
+        style={{
+          backgroundImage: "url('/bgImage1.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
         <div className="text-center max-w-3xl">
 
           {/* Company Name */}
@@ -46,6 +64,24 @@ const Home = () => {
 
         </div>
       </section>
+
+      {/* About */}
+      <About />
+
+      {/* Services */}
+      <Services />
+
+      {/* Technologies */}
+      <Technologies />
+
+      {/* Careers */}
+      <Careers />
+
+      {/* Contact */}
+      <Contact />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };

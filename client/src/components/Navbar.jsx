@@ -8,7 +8,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-slate-500 p-4 shadow-xl rounded-2xl mt-3 fixed top-0 left-1/2 transform -translate-x-1/2 w-[92%] z-50">
+        <nav className="bg-cyan-600 p-4 rounded-2xl mt-3 fixed top-0 left-1/2 transform -translate-x-1/2 w-[92%] z-50">
             <div className="container mx-auto flex items-center">
 
                 {/* Logo (Left) */}
