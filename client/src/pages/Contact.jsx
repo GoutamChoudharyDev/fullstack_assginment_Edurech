@@ -7,7 +7,7 @@ const Contact = () => {
       <Navbar />
 
       <div className="pt-32 px-6 max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">
+        <h1 className="text-4xl font-bold text-cyan-600 text-center mb-12">
           Contact Us
         </h1>
 

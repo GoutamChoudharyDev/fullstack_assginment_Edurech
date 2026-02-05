@@ -4,37 +4,37 @@ import TechnologyCard from "../components/TechnologyCard";
 const technologies = [
     {
         name: "React",
-        icon: "/public/react.jpg",
+        icon: "/react.jpg",
         description:
             "A powerful JavaScript library for building fast and interactive user interfaces.",
     },
     {
         name: "Node.js",
-        icon: "/public/node.jpg",
+        icon: "/node.jpg",
         description:
             "A scalable runtime environment for building fast backend applications.",
     },
     {
         name: "JavaScript",
-        icon: "/public/js.jpg",
+        icon: "/js.jpg",
         description:
             "The core language of the web used for dynamic and interactive applications.",
     },
     {
         name: "MongoDB",
-        icon: "/public/mongodb.jpg",
+        icon: "/mongodb.jpg",
         description:
             "A NoSQL database designed for scalability and flexibility.",
     },
     {
         name: "AWS",
-        icon: "/public/aws.jpg",
+        icon: "/aws.jpg",
         description:
             "Cloud platform offering scalable infrastructure and services.",
     },
     {
         name: "Docker",
-        icon: "/public/docker.jpg",
+        icon: "/docker.jpg",
         description:
             "Containerization platform to build, ship, and run applications efficiently.",
     },

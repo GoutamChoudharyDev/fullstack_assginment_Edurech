@@ -4,7 +4,7 @@ import ServiceCard from "../components/ServiceCard";
 const services = [
   {
     title: "Web Development",
-    image: "/public/web-development.jpg",
+    image: "/web-development.jpg",
     description:
       "We build fast, responsive, and scalable web applications for modern businesses.",
     technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Mobile App Development",
-    image: "/public/app_development.jpg",
+    image: "/app_development.jpg",
     description:
       "Custom mobile applications delivering seamless experiences across platforms.",
     technologies: ["React Native", "Flutter", "Firebase"],
@@ -28,7 +28,7 @@ const services = [
   },
   {
     title: "Full Stack Development",
-    image: "/public/full_stack.jpg",
+    image: "/full_stack.jpg",
     description:
       "Complete application development covering frontend, backend, and databases.",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
@@ -40,7 +40,7 @@ const services = [
   },
   {
     title: "Cloud Services",
-    image: "/public/cloud.jpg",
+    image: "/cloud.jpg",
     description:
       "Secure and scalable cloud infrastructure for modern business needs.",
     technologies: ["AWS", "Docker", "Kubernetes"],
@@ -52,7 +52,7 @@ const services = [
   },
   {
     title: "AI / ML Solutions",
-    image: "/public/ai_ml.jpg",
+    image: "/ai_ml.jpg",
     description:
       "Intelligent solutions powered by AI and ML to automate and optimize operations.",
     technologies: ["Python", "TensorFlow", "PyTorch"],
@@ -64,7 +64,7 @@ const services = [
   },
   {
     title: "Data Analytics",
-    image: "/public/data_analytics.jpg",
+    image: "/data_analytics.jpg",
     description:
       "Advanced analytics solutions to extract meaningful insights from data.",
     technologies: ["Python", "Power BI", "SQL"],

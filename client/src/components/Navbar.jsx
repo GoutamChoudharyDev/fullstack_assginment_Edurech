@@ -26,7 +26,7 @@ const Navbar = () => {
 
                 {/* Menu Items (Center) */}
                 <div className="hidden md:flex flex-1 justify-center space-x-8 text-white font-medium">
-                    <Link to="/" className="hover:text-yellow-400">Home</Link>
+                    <Link to="/home" className="hover:text-yellow-400">Home</Link>
                     <Link to="/about" className="hover:text-yellow-400">About</Link>
                     <Link to="/careers" className="hover:text-yellow-400">Careers</Link>
                     <Link to="/technologies" className="hover:text-yellow-400">Technologies</Link>
@@ -35,10 +35,10 @@ const Navbar = () => {
                 {/* Auth Buttons (Right) */}
                 <div className="hidden md:flex flex-1 justify-end items-center space-x-4">
                     <Link
-                        to="/login"
+                        to="/logout"
                         className="border border-white text-white px-4 py-1 rounded-full hover:bg-white hover:text-slate-900 transition"
                     >
-                        Login
+                        logout
                     </Link>
 
                     <Link
@@ -61,17 +61,17 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="md:hidden mt-4 flex flex-col space-y-3 text-white font-medium">
-                    <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+                    <Link to="/home" onClick={() => setIsOpen(false)}>Home</Link>
                     <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
                     <Link to="/careers" onClick={() => setIsOpen(false)}>Careers</Link>
                     <Link to="/technologies" onClick={() => setIsOpen(false)}>Technologies</Link>
 
                     <Link
-                        to="/login"
+                        to="/"
                         onClick={() => setIsOpen(false)}
                         className="border border-white px-4 py-2 rounded-full text-center"
                     >
-                        Login
+                        logout
                     </Link>
 
                     <Link

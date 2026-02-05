@@ -7,8 +7,10 @@ import userRouter from "./routes/user.routes.js";
 const app = express();
 
 // Enable Cors
-app.use(cors());
-
+app.use(cors({
+    origin: "*",
+    credentials: true
+}));
 // Middlewares
 app.use(express.json())
 app.use(cookieParser())
