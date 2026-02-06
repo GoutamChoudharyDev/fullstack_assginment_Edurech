@@ -16,7 +16,7 @@ const JobApplyForm = ({ job, onClose }) => {
     }
 
     try {
-      await api.post("/jobs/apply", {
+      await api.post("/api/jobs/apply", {
         jobId: job.id,
         fullName,
         email,

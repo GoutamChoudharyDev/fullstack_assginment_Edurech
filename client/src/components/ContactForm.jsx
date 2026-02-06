@@ -19,7 +19,7 @@ const ContactForm = () => {
     }
 
     try {
-      await api.post("/contact",
+      await api.post("/api/contact",
         // payload
         {
           fullName,
