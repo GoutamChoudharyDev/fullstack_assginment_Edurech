@@ -8,6 +8,10 @@ import jobApplicationRoutes from "./routes/jobAplicationRoutes.js";
 // Build express app
 const app = express();
 
+app.get("/", (req, res) => {
+    res.send("Backend is live 🚀");
+});
+
 // Enable Cors
 app.use(cors({
     origin: "*",
