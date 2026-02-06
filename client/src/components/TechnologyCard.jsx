@@ -6,7 +6,7 @@ const TechnologyCard = ({ tech }) => {
       <img
         src={tech.icon}
         alt={tech.name}
-        className="w-16 h-16 mx-auto mb-4"
+        className="w-18 rounded-full h-18 mx-auto mb-4"
       />
 
       {/* Name */}

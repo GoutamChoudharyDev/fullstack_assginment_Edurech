@@ -52,7 +52,7 @@ const Navbar = () => {
                 {/* Hamburger (Mobile Only) */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-white text-2xl"
+                    className="md:hidden text-white cursor-pointer text-2xl"
                 >
                     {isOpen ? <FiX /> : <FiMenu />}
                 </button>

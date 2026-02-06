@@ -15,7 +15,7 @@ const JobCard = ({ job, onApply }) => {
             </p>
 
             <button
-                onClick={() => onApply(job)}
+                onClick={onApply}
                 className="bg-cyan-600 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-cyan-700 transition"
             >
                 Apply Now
