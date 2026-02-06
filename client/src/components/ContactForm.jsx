@@ -33,6 +33,8 @@ const ContactForm = () => {
       setEmail("");
       setSubject("");
       setMessage("");
+
+      alert("Form submitted successfully");
     } catch (error) {
       console.log("Error in form submit:", error);
       alert("Something went wrong while contact")
