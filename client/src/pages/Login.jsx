@@ -3,14 +3,13 @@ import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 
 const Login = () => {
-    // useState
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false); // NEW
 
     let navigate = useNavigate();
 
-    // handleSubmit
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -19,8 +18,11 @@ const Login = () => {
             return;
         }
 
+        if (loading) return; // prevent multiple clicks
+
         try {
             setError(false);
+            setLoading(true); // disable button
 
             await api.post("/api/auth/user/login", {
                 email,
@@ -31,6 +33,8 @@ const Login = () => {
         } catch (err) {
             console.log("login error :", err);
             setError(true);
+        } finally {
+            setLoading(false); // re-enable if error
         }
     };
 
@@ -80,9 +84,14 @@ const Login = () => {
 
                 <button
                     type="submit"
-                    className="w-full bg-cyan-600 cursor-pointer text-white py-2 rounded hover:bg-cyan-700"
+                    disabled={loading}
+                    className={`w-full py-2 rounded text-white transition
+                        ${loading
+                            ? "bg-gray-400 cursor-not-allowed"
+                            : "bg-cyan-600 hover:bg-cyan-700 cursor-pointer"}
+                    `}
                 >
-                    Login
+                    {loading ? "Logging in..." : "Login"}
                 </button>
 
                 <p className="text-sm text-center">

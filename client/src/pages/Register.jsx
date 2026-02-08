@@ -7,6 +7,7 @@ const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false); // NEW
 
     const navigate = useNavigate();
 
@@ -18,7 +19,11 @@ const Register = () => {
             return;
         }
 
+        if (loading) return; // prevent double click
+
         try {
+            setLoading(true); // disable button
+
             await api.post("/api/auth/user/register", {
                 fullName,
                 email,
@@ -28,6 +33,8 @@ const Register = () => {
             navigate("/");
         } catch (error) {
             console.log("register error : ", error);
+        } finally {
+            setLoading(false); // enable again if error
         }
     };
 
@@ -41,7 +48,6 @@ const Register = () => {
                 minHeight: "100vh",
             }}
         >
-            {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/10"></div>
 
             <form
@@ -59,24 +65,21 @@ const Register = () => {
                 <input
                     type="text"
                     placeholder="Full Name"
-                    required
                     value={fullName}
                     onChange={(e) => {
-                        setFullName(e.target.value)
-                        setError(false)
+                        setFullName(e.target.value);
+                        setError(false);
                     }}
-
                     className="w-full px-3 py-2 border rounded focus:outline-none focus:ring"
                 />
 
                 <input
                     type="email"
                     placeholder="Email"
-                    required
                     value={email}
                     onChange={(e) => {
-                        setEmail(e.target.value)
-                        setError(false)
+                        setEmail(e.target.value);
+                        setError(false);
                     }}
                     className="w-full px-3 py-2 border rounded focus:outline-none focus:ring"
                 />
@@ -84,20 +87,24 @@ const Register = () => {
                 <input
                     type="password"
                     placeholder="Password"
-                    required
                     value={password}
                     onChange={(e) => {
-                        setPassword(e.target.value)
-                        setError(false)
+                        setPassword(e.target.value);
+                        setError(false);
                     }}
                     className="w-full px-3 py-2 border rounded focus:outline-none focus:ring"
                 />
 
                 <button
                     type="submit"
-                    className="w-full bg-cyan-600 text-white py-2 cursor-pointer rounded hover:bg-cyan-700"
+                    disabled={loading}
+                    className={`w-full py-2 rounded text-white transition
+                        ${loading 
+                            ? "bg-gray-400 cursor-not-allowed" 
+                            : "bg-cyan-600 hover:bg-cyan-700 cursor-pointer"}
+                    `}
                 >
-                    Register
+                    {loading ? "Registering..." : "Register"}
                 </button>
 
                 <p className="text-sm text-center">
